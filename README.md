@@ -1,1 +1,1 @@
-# E-commerce-web-app-for-grocery-shopping
+Ecommerce webapp for grocery shopping
