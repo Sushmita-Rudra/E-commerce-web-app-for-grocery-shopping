@@ -1,1 +1,286 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+	<title>Big Kart</title>
+
+	<!-- Stylesheets -->
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&amp;display=swap"
+		rel="stylesheet">
+	<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+
+
+	<!-- Vendor Stylesheets -->
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
+
+</head>
+<body>
+    <!-- Header Start -->
+	<header class="header clearfix">
+		<div class="top-header-group">
+			<div class="top-header">
+
+				<div class="main_logo" id="logo">
+					<a href="index.html"><img src="images/logo.png" width="50px" height="50px" alt=""></a>
+
+				</div>
+				<div class="select_location">
+					<div class="ui inline dropdown loc-title">
+						<div class="text">
+							<i class="uil uil-location-point"></i>
+							Maryville
+						</div>
+						<i class="uil uil-angle-down icon__14"></i>
+						<div class="menu dropdown_loc">
+							<div class="item channel_item">
+								<i class="uil uil-location-point"></i>
+								Maryville
+							</div>
+							<div class="item channel_item">
+								<i class="uil uil-location-point"></i>
+								Kansas city
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="search120">
+					<div class="ui search">
+						<div class="ui left icon input swdh10">
+							<input class="prompt srch10" type="text" placeholder="Search for products..">
+							<i class='uil uil-search-alt icon icon1'></i>
+						</div>
+					</div>
+				</div>
+				<div class="header_right">
+					<ul>
+						<li>
+							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>660-528-0821</a>
+						</li>
+						<li>
+							<a href="#" class="offer-link"><i class="uil uil-gift"></i>Offers</a>
+						</li>
+						<li>
+							<a href="#" class="offer-link"><i class="uil uil-question-circle"></i>Login</a>
+						</li>
+						<li>
+							<a href="#" class="option_links" title="Wishlist"><i
+									class='uil uil-heart icon_wishlist'></i><span class="noti_count1">3</span></a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="sub-header-group">
+			<div class="sub-header">
+				<div class="ui dropdown">
+					<a href="#" class="category_drop hover-btn" data-toggle="modal" data-target="#category_model"
+						title="Categories"><i class="uil uil-apps"></i><span class="cate__icon">Select
+							Category</span></a>
+				</div>
+				<nav class="navbar navbar-expand-lg navbar-light py-3">
+					<div class="container-fluid">
+						<button class="navbar-toggler menu_toggle_btn" type="button"
+							data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
+						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu"
+							id="navbarSupportedContent">
+							<ul class="navbar-nav main_nav align-self-stretch">
+								<li class="nav-item"><a href="index.html" class="nav-link active" title="Home">Home</a>
+								</li>
+								<li class="nav-item"><a href="shop_grid.html" class="nav-link"
+										title="Featured Products">Products</a></li>
+								<li class="nav-item">
+									<div class="ui icon top left dropdown nav__menu">
+										<a class="nav-link" title="Pages">Pages <i class="uil uil-angle-down"></i></a>
+										<div class="menu dropdown_page">
+											<a href="dashboard_overview.html"
+												class="item channel_item page__links">Account</a>
+											<a href="order_placed.html" class="item channel_item page__links">Order
+												Placed</a>
+											<a href="checkout.html" class="item channel_item page__links">Checkout</a>
+											<a href="contact_us.html" class="item channel_item page__links">Contact
+												Us</a>
+											<a href="about_us.html" class="item channel_item page__links">About Us</a>
+										</div>
+
+									</div>
+								</li>
+								<li class="nav-item"><a href="contact_us.html" class="nav-link" title="Contact">Contact
+									Us</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="catey__icon">
+					<a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model"
+						title="Categories"><i class="uil uil-apps"></i></a>
+				</div>
+				<div class="header_cart order-1">
+					<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i
+							class="uil uil-shopping-cart-alt"></i><span>Cart</span><ins>2</ins><i
+							class="uil uil-angle-down"></i></a>
+				</div>
+				<div class="search__icon order-1">
+					<a href="#" class="search__btn hover-btn" data-toggle="modal" data-target="#search_model"
+						title="Search"><i class="uil uil-search"></i></a>
+				</div>
+			</div>
+		</div>
+
+	</header>
+    <!-- Header End -->
+    <div class="wrapper">
+		<div class="gambo-Breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">User Dashboard</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dashboard-group">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="user-dt">
+							<div class="user-img">
+								<img src="images/userImage.jpg" alt="">
+							</div>
+							<h4>Lucas Brown</h4>
+							<p>+1 6602358609<a href="#"><i class="uil uil-edit"></i></a></p>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-4">
+						<div class="left-side-tabs">
+							<div class="dashboard-left-links">
+								<a href="dashboard_overview.html" class="user-item active"><i class="uil uil-apps"></i>Overview</a>
+								<a href="dashboard_my_orders.html" class="user-item"><i class="uil uil-box"></i>My Orders</a>
+								<a href="dashboard_my_addresses.html" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
+								<a href="sign_in.html" class="user-item"><i class="uil uil-exit"></i>Logout</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-8">
+						<div class="dashboard-right">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="main-title-tab">
+										<h4><i class="uil uil-apps"></i>Overview</h4>
+									</div>
+									<div class="welcome-text">
+										<h2>Welcome, Lucas Brown</h2>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-12">
+									<div class="pdpt-bg">
+										<div class="pdpt-title">
+											<h4>My Rewards</h4>
+										</div>
+										<div class="ddsh-body">
+											<h2>6 Rewards</h2>
+											<ul>
+												<li>
+													<a href="#" class="small-reward-dt hover-btn">Won $2</a>
+												</li>
+												<li>
+													<a href="#" class="small-reward-dt hover-btn">Won 40% Off</a>
+												</li>
+												<li>
+													<a href="#" class="small-reward-dt hover-btn">Caskback $1</a>
+												</li>
+												<li>
+													<a href="#" class="rewards-link5">+More</a>
+												</li>
+											</ul>
+										</div>
+										<a href="#" class="more-link14">Rewards and Details <i class="uil uil-angle-double-right"></i></a>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-12">
+									<div class="pdpt-bg">
+										<div class="pdpt-title">
+											<h4>My Orders</h4>
+										</div>
+										<div class="ddsh-body">
+											<h2>2 Recently Purchases</h2>
+											<ul class="order-list-145">
+												<li>
+													<div class="smll-history">
+														<div class="order-title">2 Items <span data-inverted="" data-tooltip="2kg broccoli, 1kg Apple" data-position="top center">?</span></div>
+														<div class="order-status">On the way</div>
+														<p>$22</p>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<a href="#" class="more-link14">All Orders <i class="uil uil-angle-double-right"></i></a>
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12">
+									<div class="pdpt-bg">
+										<div class="pdpt-title">
+											<h4>My Wallet</h4>
+										</div>
+										<div class="wllt-body">
+											<h2>Credits $100</h2>
+											<ul class="wallet-list">
+												<li>
+													<a href="#" class="wallet-links14"><i class="uil uil-card-atm"></i>Payment Methods</a>
+												</li>
+												<li>
+													<a href="#" class="wallet-links14"><i class="uil uil-gift"></i>3 offers Active</a>
+												</li>	
+												<li>
+													<a href="#" class="wallet-links14"><i class="uil uil-coins"></i>Points Earning</a>
+												</li>	
+											</ul>
+										</div>
+										<a href="#" class="more-link14">Rewards and Details <i class="uil uil-angle-double-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>	
+		</div>	
+	</div>
+	<!-- Body End -->
+    
+
+
+	<!-- Javascripts -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+	<script src="vendor/semantic/semantic.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/offset_overlay.js"></script>
+
+</body>
+
+</html>
