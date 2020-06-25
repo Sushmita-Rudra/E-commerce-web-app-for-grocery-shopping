@@ -29,6 +29,12 @@
       href="vendor/semantic/semantic.min.css"
     />
     <title>Big Kart - Sign Up</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="js/home.js"></script>
   </head>
 
   <body>
@@ -59,7 +65,7 @@
                       <div class="form-title"><h6>Sign Up</h6></div>
                       <div class="form-group pos_rel">
                         <input
-                          id="full[name]"
+                          id="fullname"
                           name="fullname"
                           type="text"
                           placeholder="Full name"
@@ -70,7 +76,7 @@
                       </div>
                       <div class="form-group pos_rel">
                         <input
-                          id="email[address]"
+                          id="email"
                           name="emailaddress"
                           type="email"
                           placeholder="Email Address"
@@ -82,7 +88,7 @@
 
                       <div class="form-group pos_rel">
                         <input
-                          id="password1"
+                          id="password"
                           name="password1"
                           type="password"
                           placeholder="New Password"
@@ -99,7 +105,7 @@
                   <div class="signup-link">
                     <p>
                       I have an account? -
-                      <a href="signIn.html">Sign In Now</a>
+                      <a href="user.html">Sign In Now</a>
                     </p>
                   </div>
                 </div>
