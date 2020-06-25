@@ -184,23 +184,23 @@
 }
 
 .dashboard-report-card.purple {
-    background-color: #8892d6;
-    border-color: #8892d6;
+    background-color: #ef251f;
+    border-color: #ef251f;
 }
 
 .dashboard-report-card.red {
-    background-color: #fc544b;
-    border-color: #fc544b;
+    background-color: #ef251f;
+    border-color: #ef251f;
 }
 
 .dashboard-report-card.info {
-    background-color: #45bbe0;
-    border-color: #45bbe0;
+    background-color: #ef251f;
+    border-color: #ef251f;
 }
 
 .dashboard-report-card.success {
-    background-color: #78c350;
-    border-color: #78c350;
+    background-color: #ef251f;
+    border-color: #ef251f;
 }
 
 .rpt_icon {
