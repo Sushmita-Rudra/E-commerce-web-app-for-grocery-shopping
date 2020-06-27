@@ -4,7 +4,7 @@
     <title>Big Kart - Sign In</title>
 
     <!-- Favicon Icon -->
-    <link rel="icon" type="image/png" href="images/fav.png" />
+    <!-- <link rel="icon" type="image/png" href="images/fav.png" /> -->
 
     <!-- Stylesheets -->
     <link
@@ -30,6 +30,13 @@
       type="text/css"
       href="vendor/semantic/semantic.min.css"
     />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="js/user.js"></script>
   </head>
 
   <body>
@@ -51,7 +58,7 @@
                       <div class="form-title"><h6>Sign In</h6></div>
                       <div class="form-group pos_rel">
                         <input
-                          id="email[address]"
+                          id="email"
                           name="emailaddress"
                           type="email"
                           placeholder="Email Address"
@@ -62,7 +69,7 @@
                       </div>
                       <div class="form-group pos_rel">
                         <input
-                          id="password1"
+                          id="password"
                           name="password1"
                           type="password"
                           placeholder="Enter Password"
@@ -71,7 +78,11 @@
                         />
                         <i class="uil uil-padlock lgn_icon"></i>
                       </div>
-                      <button class="login-btn hover-btn" type="submit">
+                      <button
+                        class="login-btn hover-btn"
+                        type="submit"
+                        onclick="signIn()"
+                      >
                         Sign In Now
                       </button>
                     </form>
