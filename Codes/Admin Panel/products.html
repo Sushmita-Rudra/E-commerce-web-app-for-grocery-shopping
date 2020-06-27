@@ -11,6 +11,8 @@
 	<!-- Vendor Stylesheets -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+	<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
 	
 </head>
 
@@ -18,7 +20,7 @@
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
             <a class="navbar-brand logo-brand" href="index.html">Admin Dashboard</a>
 			<button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-            <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.html" class="frnt-link"><i class="fas fa-external-link-alt"></i>Home</a>
+            <a href="#" class="frnt-link"><i class="fas fa-external-link-alt"></i>Home</a>
             <ul class="navbar-nav ml-auto mr-md-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
@@ -127,9 +129,8 @@
 											<table class="table ucp-table table-hover">
 												<thead>
 													<tr>
-														<th style="width:60px"><input type="checkbox" class="check-all"></th>
 														<th style="width:60px">ID</th>
-														<th style="width:100px">Image</th>
+														
 														<th>Name</th>
 														<th>Category</th>
 														<th>Created</th>
@@ -137,8 +138,17 @@
 														<th>Action</th>
 													</tr>
 												</thead>
-												<tbody>
-													
+												<tbody id="user-list">
+													<tr >
+														
+														<td id="ID"></td>
+														
+														<td id="name"></td>
+														<td id="Category"></td>
+														<td id="created"></td>
+														<td id="status"></td>
+														<td id="action"></td>
+													</tr>
 												</tbody>
 											</table>
 										</div>
@@ -161,7 +171,8 @@
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
-       
+		<script src="js/app.js"></script>
+		
     </body>
 
 

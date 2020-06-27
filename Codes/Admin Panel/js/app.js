@@ -23,53 +23,73 @@ const dbRef = firebase.database().ref();
 const usersRef = dbRef.child('Products');
 
 
+
+
 	readUserData(); 
 	
 
 // --------------------------
 // READ
 // --------------------------
-function readUserData() {
+function readUserData(e) {
 
-	const userListUI = document.getElementById("user-list");
+	//const userListUI = document.getElementById("user-list");
+	//var userID = e.target.getAttribute("user-key");
 
-	usersRef.on("value", snap => {
+		const userRef = dbRef.child('Products/');
+		const userDetailUI = document.getElementById("user-list");
 
-		userListUI.innerHTML = ""
+		userRef.on("value", snap => {
 
-		snap.forEach(childSnap => {
+			userDetailUI.innerHTML = ""
 
-			let key = childSnap.key,
-				value = childSnap.val()
+			snap.forEach(childSnap => {
+				var $p = document.createElement("tr");
+				
+				$p.innerHTML = "<td>"+childSnap.val().id+"</td>"+"<td>"+childSnap.val().name+"</td>"+"<td>"+childSnap.val().category+"</td>"+"<td>"+childSnap.val().time+"</td>"+"<td>"+childSnap.val().status+"</td>"+$p.append(deleteIconUI);
+				
+				userDetailUI.append($p);
+			})
+
+		});
+
+	// usersRef.on("value", snap => {
+
+	// 	userListUI.innerHTML = ""
+
+	// 	snap.forEach(childSnap => {
+
+	// 		let key = childSnap.key,
+	// 			value = childSnap.val()
   			
-			let $li = document.createElement("li");
+	// 		let $li = document.createElement("tr");
 
-			// edit icon
-			let editIconUI = document.createElement("span");
-			editIconUI.class = "edit-user";
-			editIconUI.innerHTML = " ✎";
-			editIconUI.setAttribute("userid", key);
-			editIconUI.addEventListener("click", editButtonClicked)
+			// // edit icon
+			// let editIconUI = document.createElement("span");
+			// editIconUI.class = "edit-user";
+			// editIconUI.innerHTML = " ✎";
+			// editIconUI.setAttribute("userid", key);
+			// editIconUI.addEventListener("click", editButtonClicked)
 
 			// delete icon
 			let deleteIconUI = document.createElement("span");
 			deleteIconUI.class = "delete-user";
 			deleteIconUI.innerHTML = " ☓";
-			deleteIconUI.setAttribute("userid", key);
+			//deleteIconUI.setAttribute("userid", key);
 			deleteIconUI.addEventListener("click", deleteButtonClicked)
 			
-			$li.innerHTML = value.name;
-			$li.append(editIconUI);
-			$li.append(deleteIconUI);
+			//$li.innerHTML = value.name;
+			// $li.append(editIconUI);
+			// $li.append(deleteIconUI);
 
-			$li.setAttribute("user-key", key);
-			$li.addEventListener("click", userClicked)
-			userListUI.append($li);
+			//$li.setAttribute("user-key", key);
+			//$li.addEventListener("click", userClicked)
+			//userListUI.append($li);
 
- 		});
+ 	//	});
 
 
-	})
+	//})
 
 }
 
@@ -80,16 +100,16 @@ function userClicked(e) {
 
 		var userID = e.target.getAttribute("user-key");
 
-		const userRef = dbRef.child('users/' + userID);
-		const userDetailUI = document.getElementById("user-detail");
+		const userRef = dbRef.child('Products/' + userID);
+		const userDetailUI = document.getElementById("user-list");
 
 		userRef.on("value", snap => {
 
 			userDetailUI.innerHTML = ""
 
 			snap.forEach(childSnap => {
-				var $p = document.createElement("p");
-				$p.innerHTML = childSnap.key  + " - " +  childSnap.val();
+				var $p = document.createElement("td");
+				$p.innerHTML = childSnap.val();
 				userDetailUI.append($p);
 			})
 
