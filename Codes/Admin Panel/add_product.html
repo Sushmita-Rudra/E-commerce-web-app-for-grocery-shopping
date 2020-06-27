@@ -110,11 +110,11 @@
 										<div class="news-content-right pd-20">
 											<div class="form-group">
 												<label class="form-label">Product Name*</label>
-												<input type="text" class="form-control" placeholder="Product Name">
+												<input type="text" class="form-control" data-key="name" placeholder="Product Name">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Category*</label>
-												<select id="categtory" name="categtory" class="form-control">
+												<select id="categtory" name="categtory" class="form-control" data-key="category">
 													<option selected>--Select Category--</option>
 													<option value="1">Fruits & Vegetables</option>
 													<option value="2">Grocery & Staples</option>
@@ -127,15 +127,15 @@
 											</div>
 											<div class="form-group">
 												<label class="form-label">Price*</label>
-												<input type="text" class="form-control" placeholder="$0">
+												<input type="text" class="form-control" placeholder="$0" data-key="price">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Discount Price</label>
-												<input type="text" class="form-control" placeholder="$0">
+												<input type="text" class="form-control" placeholder="$0" data-key="discount">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Status*</label>
-												<select id="status" name="status" class="form-control">
+												<select id="status" name="status" class="form-control" data-key="status">
 													<option selected>Active</option>
 													<option value="1">Inactive</option>
 												</select>
@@ -143,8 +143,8 @@
 											<div class="form-group">
 												<label class="form-label">Description*</label>
 												<div class="card card-editor">
-													<div class="content-editor">
-														 <div id='edit'></div>
+													<div class="content-editor" >
+														 <div id='edit' data-key="discount"></div>
 													</div>
 												</div>
 											</div>
@@ -191,7 +191,7 @@
 													</li>
 												</ul>
 											</div>
-											<button class="save-btn hover-btn" type="submit">Add New Product</button>
+											<button class="save-btn hover-btn" id="add-product" type="submit">Add New Product</button>
 										</div> 
 									</div>
 								</div>
@@ -210,10 +210,19 @@
             </div>
         </div>
 		
+
+		<!-- firebase sdk code-->
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+
+
+
+
 		<!-- Javascripts -->
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
+		<script src="js/scripts.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 		
 		<!-- froala Editor Javascripts -->
 		<script type="text/javascript" src="../../../cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
