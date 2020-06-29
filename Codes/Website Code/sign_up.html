@@ -31,10 +31,11 @@
     <title>Big Kart - Sign Up</title>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="js/home.js"></script>
+    <script src="js/user.js"></script>
   </head>
 
   <body>
@@ -63,7 +64,7 @@
                   <div class="form-inpts checout-address-step">
                     <form>
                       <div class="form-title"><h6>Sign Up</h6></div>
-                      <div class="form-group pos_rel">
+                      <!-- <div class="form-group pos_rel">
                         <input
                           id="fullname"
                           name="fullname"
@@ -73,8 +74,8 @@
                           required=""
                         />
                         <i class="uil uil-user-circle lgn_icon"></i>
-                      </div>
-                      <div class="form-group pos_rel">
+                      </div> -->
+                      <!-- <div class="form-group pos_rel">
                         <input
                           id="email"
                           name="emailaddress"
@@ -97,15 +98,48 @@
                         />
                         <i class="uil uil-padlock lgn_icon"></i>
                       </div>
-                      <button class="login-btn hover-btn" type="submit">
+                      <button
+                        class="login-btn hover-btn"
+                        onclick="signUp()"
+                        id="signUp"
+                      >
                         Sign Up Now
-                      </button>
+                      </button> -->
+                      <label for="inputEmail">Email address</label>
+                      <br />
+                      <div class="form-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          placeholder="Email"
+                          id="email"
+                        />
+                      </div>
+                      <label for="inputEmail">Email Password</label>
+                      <br />
+                      <input
+                        type="Password"
+                        class="form-control"
+                        placeholder="password"
+                        id="password"
+                      />
+
+                      <br />
+                      <div>
+                        <button
+                          class="btn btn-warning btn-block"
+                          onclick="signUp()"
+                          id="signUp"
+                        >
+                          Sign Up</button
+                        ><br />
+                      </div>
                     </form>
                   </div>
                   <div class="signup-link">
                     <p>
                       I have an account? -
-                      <a href="user.html">Sign In Now</a>
+                      <a href="signin.html">Sign In Now</a>
                     </p>
                   </div>
                 </div>
