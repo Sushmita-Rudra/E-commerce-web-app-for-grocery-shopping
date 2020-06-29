@@ -42,7 +42,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         
 						<a class="dropdown-item admin-dropdown-item" href="#">Change Password</a>
-                        <a class="dropdown-item admin-dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item admin-dropdown-item" href="login.html">Logout</a>
                     </div>
                 </li>
             </ul>
@@ -78,7 +78,7 @@
 							</a>
                             <div class="collapse" id="collapseProducts" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="#">All Products</a>
+									<a class="nav-link sub_nav_link" href="products.html">All Products</a>
 									<a class="nav-link sub_nav_link" href="add_product.html">Add Product</a>
 								</nav>
                             </div>
@@ -116,12 +116,12 @@
 												<label class="form-label">Category*</label>
 												<select id="categtory" name="categtory" class="form-control" data-key="category">
 													<option selected>--Select Category--</option>
-													<option value="1">Fruits & Vegetables</option>
-													<option value="2">Grocery & Staples</option>
-													<option value="3">Dairy & Eggs</option>
-													<option value="4">Beverages</option>
-													<option value="5">Snacks</option>
-													<option value="10">Meat & Seafood</option>
+													<option  name="Fruits & Vegetables">Fruits & Vegetables</option>
+													<option name="Grocery & Staples">Grocery & Staples</option>
+													<option name="Dairy & Eggs">Dairy & Eggs</option>
+													<option name="Beverages">Beverages</option>
+													<option name="Snacks">Snacks</option>
+													<option name="Meat & Seafood">Meat & Seafood</option>
 													
 												</select>
 											</div>
@@ -144,7 +144,7 @@
 												<label class="form-label">Description*</label>
 												<div class="card card-editor">
 													<div class="content-editor" >
-														 <div id='edit' data-key="discount"></div>
+														 <div id='edit' data-key="description"></div>
 													</div>
 												</div>
 											</div>
@@ -260,6 +260,7 @@
 			  })
 			})()
 		</script>
+		
 		
     </body>
 

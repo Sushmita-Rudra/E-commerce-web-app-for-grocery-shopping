@@ -75,7 +75,7 @@ function readUserData(e) {
 			let deleteIconUI = document.createElement("span");
 			deleteIconUI.class = "delete-user";
 			deleteIconUI.innerHTML = " ☓";
-			//deleteIconUI.setAttribute("userid", key);
+			deleteIconUI.setAttribute("userid", key);
 			deleteIconUI.addEventListener("click", deleteButtonClicked)
 			
 			//$li.innerHTML = value.name;
@@ -144,11 +144,14 @@ function addUserBtnClicked() {
     for (let i = 0, len = addUserInputsUI.length; i < len; i++) {
 
         let key = addUserInputsUI[i].getAttribute('data-key');
-        let value = addUserInputsUI[i].value;
+		let value = addUserInputsUI[i].value;
+
+		
         newUser[key] = value;
     }
 
 	usersRef.push(newUser)
+	
 
     
    console.log(myPro)

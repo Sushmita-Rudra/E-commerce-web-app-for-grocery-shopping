@@ -98,7 +98,7 @@
 }
 
 .frnt-link:hover {
-    color: #ef251f !important;
+    color: #EF251F !important;
 }
 
 .page-title {
@@ -399,8 +399,8 @@ input[type=checkbox], input[type=radio] {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left,#EF251F, #EF251F);
+    background-image: linear-gradient(to right, #EF251F, #EF251F);
 }
 
 .action-btns {
@@ -840,8 +840,8 @@ div#editor {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left,#ef251f, #ef251f);
+    background-image: linear-gradient(to right,#ef251f, #ef251f);
 }
 
 
@@ -1442,8 +1442,8 @@ div#editor {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));;
+	background-image: -webkit-linear-gradient(left,#ef251f, #ef251f);
+    background-image: linear-gradient(to right,#ef251f, #ef251f);;
 	pointer-events:none;
 }
 
@@ -1524,8 +1524,8 @@ div#editor {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9))
+	background-image: -webkit-linear-gradient(left, #efefef, #efefef);
+    background-image: linear-gradient(to right, #efefef, #efefef)
 }
 
 .card-sign-header {
