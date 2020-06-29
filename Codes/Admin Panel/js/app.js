@@ -122,43 +122,43 @@ function userClicked(e) {
 
 
 
-// --------------------------
-// ADD
-// --------------------------
+// // --------------------------
+// // ADD
+// // --------------------------
 
-const addUserBtnUI = document.getElementById("add-product");
-addUserBtnUI.addEventListener("click", addUserBtnClicked)
+// const addUserBtnUI = document.getElementById("add-product");
+// addUserBtnUI.addEventListener("click", addUserBtnClicked)
 
 
 
-function addUserBtnClicked() {
+// function addUserBtnClicked() {
 
-	const usersRef = dbRef.child('Products');
+// 	const usersRef = dbRef.child('Products');
 
-	const addUserInputsUI = document.getElementsByClassName("form-control");
+// 	const addUserInputsUI = document.getElementsByClassName("form-control");
 
- 	// this object will hold the new user information
-    let newUser = {};
+//  	// this object will hold the new user information
+//     let newUser = {};
 
-    // loop through View to get the data for the model 
-    for (let i = 0, len = addUserInputsUI.length; i < len; i++) {
+//     // loop through View to get the data for the model 
+//     for (let i = 0, len = addUserInputsUI.length; i < len; i++) {
 
-        let key = addUserInputsUI[i].getAttribute('data-key');
-		let value = addUserInputsUI[i].value;
+//         let key = addUserInputsUI[i].getAttribute('data-key');
+// 		let value = addUserInputsUI[i].value;
 
 		
-        newUser[key] = value;
-    }
+//         newUser[key] = value;
+//     }
 
-	usersRef.push(newUser)
+// 	usersRef.push(newUser)
 	
 
     
-   console.log(myPro)
+//    console.log(myPro)
    
 
 
-}
+// }
 
 
 // --------------------------

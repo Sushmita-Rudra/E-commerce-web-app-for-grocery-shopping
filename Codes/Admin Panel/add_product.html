@@ -222,7 +222,7 @@
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="js/scripts.js"></script>
-		<script type="text/javascript" src="js/app.js"></script>
+		<!-- <script type="text/javascript" src="js/app.js"></script> -->
 		
 		<!-- froala Editor Javascripts -->
 		<script type="text/javascript" src="../../../cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
@@ -260,8 +260,67 @@
 			  })
 			})()
 		</script>
+		<script>
+			// !IMPORTANT: REPLACE WITH YOUR OWN CONFIG OBJECT BELOW
+
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyBqOrei74F8bc_gx5Da4ObEoJHZUNiIozA",
+      authDomain: "bigkart-bdb25.firebaseapp.com",
+      databaseURL: "https://bigkart-bdb25.firebaseio.com",
+      projectId: "bigkart-bdb25",
+      storageBucket: "bigkart-bdb25.appspot.com",
+      messagingSenderId: "1054476211210",
+      appId: "1:1054476211210:web:ffc53449434e4ca929fbf3",
+      measurementId: "G-962J9KN38Y"
+};
+
+
+
+firebase.initializeApp(config);
+
+// Firebase Database Reference and the child
+const dbRef = firebase.database().ref();
+const usersRef = dbRef.child('Products');
+			// --------------------------
+// ADD
+// --------------------------
+
+const addUserBtnUI = document.getElementById("add-product");
+addUserBtnUI.addEventListener("click", addUserBtnClicked)
+
+
+
+function addUserBtnClicked() {
+
+	const usersRef = dbRef.child('Products');
+
+	const addUserInputsUI = document.getElementsByClassName("form-control");
+
+ 	// this object will hold the new user information
+    let newUser = {};
+
+    // loop through View to get the data for the model 
+    for (let i = 0, len = addUserInputsUI.length; i < len; i++) {
+
+        let key = addUserInputsUI[i].getAttribute('data-key');
+		let value = addUserInputsUI[i].value;
+
 		
-		
+        newUser[key] = value;
+    }
+
+	usersRef.push(newUser)
+	
+
+    
+   console.log(myPro)
+   
+
+
+}
+		</script>
     </body>
 
 
