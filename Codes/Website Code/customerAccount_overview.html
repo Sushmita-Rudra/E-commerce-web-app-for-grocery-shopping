@@ -70,12 +70,17 @@
 							<a href="#" class="offer-link"><i class="uil uil-gift"></i>Offers</a>
 						</li>
 						<li>
-							<a href="#" class="offer-link"><i class="uil uil-question-circle"></i>Login</a>
-						</li>
-						<li>
-							<a href="#" class="option_links" title="Wishlist"><i
-									class='uil uil-heart icon_wishlist'></i><span class="noti_count1">3</span></a>
-						</li>
+							<label><span id="accountprofile"></span></label>
+						  </li>
+						  <li>
+							<button
+					  class="btn btn-primary btn-block"
+					  onclick="signOut()"
+					  id="signOut"
+					>
+					  Sign Out
+					  </button
+					><br />
 
 					</ul>
 				</div>
@@ -162,7 +167,7 @@
 							<div class="user-img">
 								<img src="images/userImage.jpg" alt="">
 							</div>
-							<h4>Lucas Brown</h4>
+							<label><span id="currentuser"></span></label>
 							<p>+1 6602358609<a href="#"><i class="uil uil-edit"></i></a></p>
 							
 						</div>
@@ -191,7 +196,7 @@
 										<h4><i class="uil uil-apps"></i>Overview</h4>
 									</div>
 									<div class="welcome-text">
-										<h2>Welcome, Lucas Brown</h2>
+										<h2><label><span id="currentuser"></span></label></h2>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-12">
