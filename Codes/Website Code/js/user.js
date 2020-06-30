@@ -23,6 +23,7 @@ function signUp() {
     email.value,
     password.value
   );
+  promise.catch((e) => alert(e.message));
   window.location.replace("signin - Copy.html");
   promise.catch((e) => alert(e.message));
 }
@@ -81,6 +82,6 @@ auth.onAuthStateChanged(function (user) {
     document.getElementById("accountprofile").innerHTML = email;
     // window.location.replace("homepage-user.html");
   } else {
-    alert("No active user ");
+    // alert("No active user ");
   }
 });
