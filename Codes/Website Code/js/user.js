@@ -18,15 +18,25 @@ const auth = firebase.auth();
 function signUp() {
   var email = document.getElementById("email");
   var password = document.getElementById("password");
-
-  const promise = auth.createUserWithEmailAndPassword(
-    email.value,
-    password.value
-  );
-  promise.catch((e) => alert(e.message));
-  window.location.replace("signin - Copy.html");
-  promise.catch((e) => alert(e.message));
+  if (password != "") {
+    const promise = auth
+      .createUserWithEmailAndPassword(email.value, password.value)
+      .then(function () {
+        alert("Account has been succesful set Up");
+        window.location.replace("signin - copy.html");
+      })
+      .catch(function (error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+        alert("Message: " + errorMessage);
+      });
+  } else {
+    promise.catch((e) => alert(e.message));
+  }
 }
+
 function signIn() {
   var email = document.getElementById("email");
   var password = document.getElementById("password");
@@ -79,7 +89,8 @@ auth.onAuthStateChanged(function (user) {
     // is signed in
     var email = user.email;
     document.getElementById("currentuser").innerHTML = email;
-    document.getElementById("accountprofile").innerHTML = email;
+    document.getElementById("currentuser").innerHTML = email;
+
     // window.location.replace("homepage-user.html");
   } else {
     // alert("No active user ");
