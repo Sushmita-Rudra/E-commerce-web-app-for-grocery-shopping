@@ -88,9 +88,9 @@ auth.onAuthStateChanged(function (user) {
   if (user) {
     // is signed in
     var email = user.email;
-    document.getElementById("currentuser").innerHTML = email;
-    document.getElementById("currentuser").innerHTML = email;
 
+    document.getElementById("currentuser").innerHTML = email;
+    document.getElementById("currentuser").innerHTML = email;
     // window.location.replace("homepage-user.html");
   } else {
     // alert("No active user ");
