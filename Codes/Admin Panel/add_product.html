@@ -222,7 +222,7 @@
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="js/scripts.js"></script>
-		<!-- <script type="text/javascript" src="js/app.js"></script> -->
+		<script type="text/javascript" src="js/moment.js"></script>
 		
 		<!-- froala Editor Javascripts -->
 		<script type="text/javascript" src="../../../cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
@@ -283,15 +283,12 @@ firebase.initializeApp(config);
 // Firebase Database Reference and the child
 const dbRef = firebase.database().ref();
 const usersRef = dbRef.child('Products');
-			// --------------------------
+// --------------------------
 // ADD
 // --------------------------
 
 const addUserBtnUI = document.getElementById("add-product");
 addUserBtnUI.addEventListener("click", addUserBtnClicked)
-
-
-
 function addUserBtnClicked() {
 
 	const usersRef = dbRef.child('Products');
@@ -306,13 +303,15 @@ function addUserBtnClicked() {
 
         let key = addUserInputsUI[i].getAttribute('data-key');
 		let value = addUserInputsUI[i].value;
-
-		
-        newUser[key] = value;
+		let ranvalue = Math.floor(Math.random() * (10000 - 1000)) + 1000
+		newUser[key] = value;
+		newUser['ID'] = ranvalue;
+		var today = moment().format('D MMM, YYYY');
+		newUser['createdon'] = today;
     }
 
 	usersRef.push(newUser)
-	
+	window.alert("Product added successfully")
 
     
    console.log(myPro)

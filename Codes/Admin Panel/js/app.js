@@ -46,7 +46,7 @@ function readUserData(e) {
 			snap.forEach(childSnap => {
 				var $p = document.createElement("tr");
 				
-				$p.innerHTML = "<td>"+childSnap.val().id+"</td>"+"<td>"+childSnap.val().name+"</td>"+"<td>"+childSnap.val().category+"</td>"+"<td>"+childSnap.val().time+"</td>"+"<td>"+childSnap.val().status+"</td>"+$p.append(deleteIconUI);
+				$p.innerHTML = "<td>"+childSnap.val().ID+"</td>"+"<td>"+childSnap.val().name+"</td>"+"<td>"+childSnap.val().category+"</td>"+"<td>"+childSnap.val().createdon+"</td>"+"<td>"+childSnap.val().status+"</td>"+$p.append(deleteIconUI);
 				
 				userDetailUI.append($p);
 			})
