@@ -33,6 +33,7 @@
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -56,35 +57,37 @@
                   <div class="form-inpts checout-address-step">
                     <form>
                       <div class="form-title"><h6>Sign In</h6></div>
-                      <div class="form-group pos_rel">
+                      <div id="formContainer">
+                        <div id="header"></div>
+                        <label for="inputEmail">Email address</label>
+                        <br />
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            class="form-control"
+                            placeholder="Email"
+                            id="email"
+                          />
+                        </div>
+                        <label for="inputEmail">Email Password</label>
+                        <br />
                         <input
-                          id="email"
-                          name="emailaddress"
-                          type="email"
-                          placeholder="Email Address"
-                          class="form-control lgn_input"
-                          required=""
-                        />
-                        <i class="uil uil-envelope lgn_icon"></i>
-                      </div>
-                      <div class="form-group pos_rel">
-                        <input
+                          type="Password"
+                          class="form-control"
+                          placeholder="password"
                           id="password"
-                          name="password1"
-                          type="password"
-                          placeholder="Enter Password"
-                          class="form-control lgn_input"
-                          required=""
                         />
-                        <i class="uil uil-padlock lgn_icon"></i>
-                      </div>
-                      <button
-                        class="login-btn hover-btn"
-                        type="submit"
-                        onclick="signIn()"
-                      >
-                        Sign In Now
-                      </button>
+                        <div>
+                          <br />
+                          <button
+                            class="btn btn-primary btn-block"
+                            onclick="signIn()"
+                            id="signIn"
+                          >
+                            Sign In
+                          </button>
+                        </div>
+                      
                     </form>
                   </div>
                   <div class="password-forgor">
