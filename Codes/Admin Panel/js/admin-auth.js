@@ -20,9 +20,7 @@ function login(){
 var useremail = document.getElementById("email").value
 var userpassword = document.getElementById("password").value
 
-if(email.value.length == 0 || forgotPassword.value.length == 0){
-  alert("email or password is not entered")
-}
+
 
 firebase.auth().signInWithEmailAndPassword(useremail, userpassword).catch(function(error) {
     // Handle Errors here.
@@ -58,7 +56,7 @@ firebase.auth().signInWithEmailAndPassword(useremail, userpassword).catch(functi
     
     // [END_EXCLUDE]
   });
-  
+
 
   function forgotPassword() {
 
@@ -74,7 +72,7 @@ var emailAddress = "deepakmalempati@gmail.com";
 
 auth.sendPasswordResetEmail(emailAddress).then(function() {
   // Email sent.
-  alert("Reset link sent to registered email")
+  alert("Password reset link sent to registered email")
 }).catch(function(error) {
   // An error happened.
 });
