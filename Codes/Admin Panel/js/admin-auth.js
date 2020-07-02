@@ -68,9 +68,9 @@ firebase.auth().signInWithEmailAndPassword(useremail, userpassword).catch(functi
 
     // var auth = firebase.auth();
     var auth = firebase.auth();
-var emailAddress = "deepakmalempati@gmail.com";
 
-auth.sendPasswordResetEmail(emailAddress).then(function() {
+
+auth.sendPasswordResetEmail("kamalreddy4195@gmail.com").then(function() {
   // Email sent.
   alert("Password reset link sent to registered email")
 }).catch(function(error) {
