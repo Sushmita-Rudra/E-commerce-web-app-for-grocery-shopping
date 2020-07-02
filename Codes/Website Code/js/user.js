@@ -23,7 +23,7 @@ function signUp() {
       .createUserWithEmailAndPassword(email.value, password.value)
       .then(function () {
         alert("Account has been succesful set Up");
-        window.location.replace("signin - copy.html");
+        window.location.replace("signin.html");
       })
       .catch(function (error) {
         var errorCode = error.code;
@@ -70,7 +70,7 @@ function forgotPassword() {
       .sendPasswordResetEmail(forgotemail)
       .then(function () {
         alert("Email has been sent to you, Please check email and verify");
-        window.location.replace("signin - copy.html");
+        window.location.replace("signin.html");
       })
       .catch(function (error) {
         var errorCode = error.code;

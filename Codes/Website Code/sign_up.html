@@ -1,164 +1,83 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Favicon Icon -->
-    <link rel="icon" type="image/png" href="images/fav.png" />
 
-    <!-- Stylesheets -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link href="vendor/unicons-2.0.1/css/unicons.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/responsive.css" rel="stylesheet" />
-    <link href="css/night-mode.css" rel="stylesheet" />
-    <link href="css/step-wizard.css" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <!-- bootstrap-->
 
-    <!-- Vendor Stylesheets -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
-    <link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet" />
-    <link
-      href="vendor/OwlCarousel/assets/owl.theme.default.min.css"
-      rel="stylesheet"
-    />
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="vendor/semantic/semantic.min.css"
-    />
-    <title>Big Kart - Sign Up</title>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="js/user.js"></script>
-  </head>
+  <title>Identify User</title>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+  <script src="js/user.js"></script>
+</head>
 
-  <body>
-    <div class="sign-inup">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-5">
-            <div class="sign-form">
-              <div class="sign-inner">
-                <div class="sign-logo" id="logo">
-                  <a href="index.html"><img src="images/logo.svg" alt="" /></a>
-                  <a href="index.html"
-                    ><img
-                      class="logo-inverse"
-                      src="images/dark-logo.svg"
-                      alt=""
-                  /></a>
+<body>
+  <div id="formContainer">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+          <div class="card shadow-lg border-0 rounded-lg mt-5">
+            <div>
+              <a href="Homepage.html">
+                <img style="height: 200px; position: center; display: block;
+              margin-left: auto;
+              margin-right: auto;" src="images/logo.png" alt="" /></a>
+            </div>
+            <div id="header"></div>
+            <div class="card-header card-sign-header">
+              <h3 class="text-center font-weight-light my-4">New to BigKart?<br>Create you account here</h3>
+            </div>
+            <div class="card-body">
+               
+                <br />
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Email"
+          id="email"
+        />
+      </div>
+      <label for="inputEmail">Email Password</label>
+      <br />
+      <input
+        type="Password"
+        class="form-control"
+        placeholder="password"
+        id="password"
+      />
+      <div>
+
+              </br>
+                <div>
+                  <button
+                    class="btn btn-warning btn-block"
+                    onclick="signUp()"
+                    id="signUp"
+                  >
+                    Sign Up</button
+                  ><br />
                 </div>
-                <div class="sign-logo" id="logo">
-                  <a href="index.html"><img src="images/logo.png" alt="" /></a>
-                  <a href="index.html"
-                    ><img class="logo-inverse" src="images/logo.png" alt=""
-                  /></a>
-                </div>
-                <div class="form-dt">
-                  <div class="form-inpts checout-address-step">
-                    <form>
-                      <div class="form-title"><h6>Sign Up</h6></div>
-                      <!-- <div class="form-group pos_rel">
-                        <input
-                          id="fullname"
-                          name="fullname"
-                          type="text"
-                          placeholder="Full name"
-                          class="form-control lgn_input"
-                          required=""
-                        />
-                        <i class="uil uil-user-circle lgn_icon"></i>
-                      </div> -->
-                      <!-- <div class="form-group pos_rel">
-                        <input
-                          id="email"
-                          name="emailaddress"
-                          type="email"
-                          placeholder="Email Address"
-                          class="form-control lgn_input"
-                          required=""
-                        />
-                        <i class="uil uil-envelope lgn_icon"></i>
-                      </div>
+              
+                <a href="forgotpassword.html">forgot password/ Reset password</a>
+                <br />
+                <a href="signin.html">  Already have an account? sign In </a>
 
-                      <div class="form-group pos_rel">
-                        <input
-                          id="password"
-                          name="password1"
-                          type="password"
-                          placeholder="New Password"
-                          class="form-control lgn_input"
-                          required=""
-                        />
-                        <i class="uil uil-padlock lgn_icon"></i>
-                      </div>
-                      <button
-                        class="login-btn hover-btn"
-                        onclick="signUp()"
-                        id="signUp"
-                      >
-                        Sign Up Now
-                      </button> -->
-                      <label for="inputEmail">Email address</label>
-                      <br />
-                      <div class="form-group">
-                        <input
-                          type="email"
-                          class="form-control"
-                          placeholder="Email"
-                          id="email"
-                        />
-                      </div>
-                      <label for="inputEmail">Email Password</label>
-                      <br />
-                      <input
-                        type="Password"
-                        class="form-control"
-                        placeholder="password"
-                        id="password"
-                      />
-
-                      <br />
-                      <div>
-                        <button
-                          class="btn btn-warning btn-block"
-                          onclick="signUp()"
-                          id="signUp"
-                        >
-                          Sign Up</button
-                        ><br />
-                      </div>
-                    </form>
-                  </div>
-                  <div class="signup-link">
-                    <p>
-                      I have an account? -
-                      <a href="signin.html">Sign In Now</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+</body>
 
-    <!-- Javascripts -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/OwlCarousel/owl.carousel.js"></script>
-    <script src="vendor/semantic/semantic.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/product.thumbnail.slider.js"></script>
-    <script src="js/offset_overlay.js"></script>
-    <script src="js/night-mode.js"></script>
-  </body>
 </html>
