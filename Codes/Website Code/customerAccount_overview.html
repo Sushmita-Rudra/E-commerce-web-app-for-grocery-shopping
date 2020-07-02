@@ -22,6 +22,10 @@
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
 
+	<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+  <script src="js/user.js"></script>
+
 </head>
 <body>
     <!-- Header Start -->
@@ -70,7 +74,7 @@
 							<a href="#" class="offer-link"><i class="uil uil-gift"></i>Offers</a>
 						</li>
 						<li>
-							<label><span id="accountprofile"></span></label>
+							<label><span id="currentuser"></span></label>
 						  </li>
 						  <li>
 							<button
@@ -167,7 +171,8 @@
 							<div class="user-img">
 								<img src="images/userImage.jpg" alt="">
 							</div>
-							<label><span id="currentuser"></span></label>
+						</br>
+							<label><span id="accountuser"></span></label>
 							<p>+1 6602358609<a href="#"><i class="uil uil-edit"></i></a></p>
 							
 						</div>
@@ -196,7 +201,7 @@
 										<h4><i class="uil uil-apps"></i>Overview</h4>
 									</div>
 									<div class="welcome-text">
-										<h2><label><span id="currentuser"></span></label></h2>
+										<h2><label><span id="currentuserheading"></span></label></h2>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-12">
@@ -205,9 +210,9 @@
 											<h4>Profile</h4>
 										</div>
 										<div class="ddsh-body">
-											<h2>Lucas Brown</h2>
+											
 											<h4>Phone Number: +1 660-235-8609</h4>
-											<h4>Email Address: lucasbrown@gmail.com</h4>
+											<h4><span id="currentuserheading"></span></h4>
 											
 											<ul>
 												<li>

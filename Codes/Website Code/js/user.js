@@ -90,7 +90,9 @@ auth.onAuthStateChanged(function (user) {
     var email = user.email;
 
     document.getElementById("currentuser").innerHTML = email;
-    document.getElementById("currentuser").innerHTML = email;
+    document.getElementById("accountuser").innerHTML = email;
+    document.getElementById("currentuserheading").innerHTML = email;
+    document.getElementById("currentuseremail").innerHTML = email;
     // window.location.replace("homepage-user.html");
   } else {
     // alert("No active user ");
