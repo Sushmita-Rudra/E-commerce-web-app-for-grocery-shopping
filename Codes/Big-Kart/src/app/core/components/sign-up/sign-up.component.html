@@ -1,0 +1,96 @@
+<div class="container col-md-6 mt-5">
+  <h1 class="h3 mb-3 font-weight-normal">Create new account</h1>
+  <div>
+    <div class="row" *ngIf="authError">
+      <div class="alert alert-danger">
+                {{ authError?.message }}       
+      </div>
+    </div>
+  </div>
+    
+  <form #userRegInfoForm="ngForm" (ngSubmit)="createUser(userRegInfoForm)">
+    <div class="form-group">
+      <label for="firstName">First Name</label>       
+      <input
+        ngModel
+        #firstName="ngModel"
+        name="firstName"
+        type="text"
+        id="firstName"
+        class="form-control"
+        placeholder="First Name"
+        required
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="!firstName.valid && firstName.touched"
+      >
+        First name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>       
+      <input
+        ngModel
+        #lastName="ngModel"
+        name="lastName"
+        type="text"
+        id="lastName"
+        class="form-control"
+        placeholder="Last Name"
+        required
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="!lastName.valid && lastName.touched"
+      >
+        Last name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail">Email address</label>       
+      <input
+        ngModel
+        #email="ngModel"
+        name="email"
+        type="email"
+        id="inputEmail"
+        class="form-control"
+        placeholder="Email address"
+        required
+        pattern=".+\@.+\..+"
+      />
+      <div class="alert alert-danger" *ngIf="!email.valid && email.touched">
+        <div *ngIf="email.errors.required">Email address is required</div>
+        <div *ngIf="email.errors.pattern">Email is badly formatted</div>
+      </div>
+    </div>
+    <div class="form-group">
+       <label for="password">Password</label>       
+      <input
+        ngModel
+        #password="ngModel"
+        name="password"
+        type="password"
+        id="password"
+        class="form-control"
+        placeholder="Password"
+        required
+        minlength="6"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="!password.valid && password.touched"
+      >
+        <div *ngIf="password.errors.required">Password is required</div>
+        <div *ngIf="password.errors.minlength">
+          Password should have a minimum length of 6 characters
+        </div>
+      </div>
+    </div>
+    <a [routerLink]="['/log-in']">Already have an account? Login</a>
+    <button class="btn btn-lg btn-primary btn-block mt-3" type="submit">
+            Sign up     
+    </button>
+  </form>
+</div>

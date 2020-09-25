@@ -7,6 +7,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserSignUpComponent } from './components/user-sign-up/user-sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { LogInComponent } from './components/log-in/log-in.component';
 
 @NgModule({
   imports: [
@@ -18,7 +20,9 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     HomeComponent,
     LoginComponent,
     UserSignUpComponent,
-    ForgotPasswordComponent,        
+    ForgotPasswordComponent,
+    SignUpComponent,
+    LogInComponent,        
   ],
   exports: [
     BsNavbarComponent

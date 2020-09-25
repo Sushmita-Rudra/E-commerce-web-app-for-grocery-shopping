@@ -1,0 +1,61 @@
+<div class="container col-md-6 mt-5">
+  <form #logInForm="ngForm" (ngSubmit)="logInUser(logInForm)">
+    <img class="mb-4" src="" alt="BigKart Logo" width="72" height="72" />
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <div>
+      <div class="row" *ngIf="authError">
+        <div class="alert alert-danger">
+                  {{ authError?.message }}       
+        </div>
+      </div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="inputEmail">Email address</label>
+      <input
+        ngModel
+        #inputEmail="ngModel"
+        name="inputEmail"
+        type="email"
+        id="inputEmail"
+        class="form-control"
+        placeholder="Email address"
+        required
+        pattern=".+\@.+\..+"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="!inputEmail.valid && inputEmail.touched"
+      >
+        <div *ngIf="inputEmail.errors.required">Email address is required</div>
+        <div *ngIf="inputEmail.errors.pattern">Email is badly formatted</div>
+      </div>
+    </div>
+
+    <div class="form-group mb-5">
+      <label for="inputPassword">Password</label>
+      <input
+        ngModel
+        #inputPassword="ngModel"
+        name="inputPassword"
+        type="password"
+        id="inputPassword"
+        class="form-control"
+        placeholder="Password"
+        required
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="!inputPassword.valid && inputPassword.touched"
+      >
+        Password is required
+      </div>
+    </div>
+    <div class="mb-3">
+      <a [routerLink]="['/sign-up']">Create new account?</a>
+      <a class="ml-3" [routerLink]="['/forgot-password']">Forgot password?</a>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">
+      Sign in
+    </button>
+  </form>
+</div>
