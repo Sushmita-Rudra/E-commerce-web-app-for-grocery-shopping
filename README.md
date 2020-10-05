@@ -4,7 +4,7 @@ This project is to develop an e-commerce web application to users for grocery sh
 
 ## Team members and their roles:
 1. Deepak Malempati - Project Manager, Developer
-1. Omkar Abhiteja Badda - QA Engineer(Testing)
+1. Omkar Abhiteja Badda - QA Engineer (Testing)
 1. Sushmita Rudra - Developer
 1. Kamal Reddy Donthireddy - Developer
 1. Gangadhar Yerramsetti - DB Administrator
