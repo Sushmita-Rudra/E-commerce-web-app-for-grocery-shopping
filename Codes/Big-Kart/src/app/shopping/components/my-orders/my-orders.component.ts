@@ -1,9 +1,7 @@
+import { AuthService } from "shared/services/auth.service";
+import { OrderService } from "../../../shared/services/order.service";
 import { Component, OnInit } from "@angular/core";
-import { OrderService } from "../services/order.service";
-
-import { FirebaseService } from "../services/firebase.service";
-
-import { switchMap } from "rxjs/operators";
+import "rxjs/add/operator/switchMap";
 import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
@@ -11,31 +9,29 @@ import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
   templateUrl: "./my-orders.component.html",
   styleUrls: ["./my-orders.component.css"],
 })
-export class MyOrdersComponent implements OnInit {
-  closeResult = "";
+export class MyOrdersComponent {
   orders$;
+  closeResult = "";
 
   constructor(
-    public firebaseService: FirebaseService,
+    private authService: AuthService,
     private orderService: OrderService,
     private modalService: NgbModal
   ) {
-    this.orders$ = firebaseService.user$.pipe(
-      switchMap((u) => orderService.getOrdersByUser(u.uid))
+    this.orders$ = authService.user$.switchMap((u) =>
+      orderService.getOrdersByUser(u.uid)
     );
   }
 
   open(content) {
-    this.modalService
-      .open(content, { ariaLabelledBy: "modal-basic-title" })
-      .result.then(
-        (result) => {
-          this.closeResult = `Closed with: ${result}`;
-        },
-        (reason) => {
-          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-        }
-      );
+    this.modalService.open(content).result.then(
+      (result) => {
+        this.closeResult = `Closed with: ${result}`;
+      },
+      (reason) => {
+        this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+      }
+    );
   }
 
   private getDismissReason(reason: any): string {
