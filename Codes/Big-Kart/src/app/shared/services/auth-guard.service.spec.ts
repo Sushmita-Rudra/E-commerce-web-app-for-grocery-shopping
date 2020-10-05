@@ -1,5 +1,5 @@
 import { TestBed, inject } from '@angular/core/testing';
-
+import {Firebase} from './auth.service';
 import { AuthGuard } from './auth-guard.service';
 
 describe('AuthGuardService', () => {
