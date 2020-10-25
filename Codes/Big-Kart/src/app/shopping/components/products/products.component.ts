@@ -58,8 +58,8 @@ export class ProductsComponent implements OnInit  {
   search(query: string){
     console.log(query);
     this.filteredProducts = (query) ?
-    // this.products.filter(p => p.title.toLowerCase().includes(query.toLowerCase())) : 
-    // this.products;
+    this.products.filter(p => p.title.toLowerCase().includes(query.toLowerCase())) : 
+    this.products;
     this.products.filter(p => p.description.toLowerCase().includes(query.toLowerCase())) : 
     this.products;
     
