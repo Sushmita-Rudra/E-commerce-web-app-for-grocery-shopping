@@ -1,0 +1,151 @@
+<form #f="ngForm">
+  <div class="form-group">
+    <label for="">Name</label>
+    <input
+      #name="ngModel"
+      name="name"
+      [(ngModel)]="shipping.name"
+      type="text"
+      class="form-control"
+      required
+    />
+    <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+      <div *ngIf="name.errors.required">Name is required.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="">Address</label>
+    <input
+      #addressLine1="ngModel"
+      name="addressLine1"
+      [(ngModel)]="shipping.addressLine1"
+      type="text"
+      class="form-control"
+      placeholder="Line 1"
+      required
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="addressLine1.touched && addressLine1.invalid"
+    >
+      <div *ngIf="addressLine1.errors.required">
+        Address Line 1 is required.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for=""></label>
+    <input
+      #addressLine2="ngModel"
+      name="addressLine2"
+      [(ngModel)]="shipping.addressLine2"
+      type="text"
+      class="form-control"
+      placeholder="Line 2"
+      required
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="addressLine2.touched && addressLine2.invalid"
+    >
+      <div *ngIf="addressLine2.errors.required">
+        Address Line 2 is required.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="">City</label>
+    <input
+      #city="ngModel"
+      name="city"
+      [(ngModel)]="shipping.city"
+      type="text"
+      class="form-control"
+      required
+    />
+    <div class="alert alert-danger" *ngIf="city.touched && city.invalid">
+      <div *ngIf="city.errors.required">City is required.</div>
+    </div>
+  </div>
+
+  <div class="col-50">
+    <h3>Payment</h3>
+    <label for="fname"> <h4>Accepted Cards</h4></label>
+    <div class="icon-container" style="size: 100px">
+      <i class="fa fa-cc-visa" style="color: navy"></i>
+      <i class="fa fa-cc-amex" style="color: blue"></i>
+      <i class="fa fa-cc-mastercard" style="color: red"></i>
+      <i class="fa fa-cc-discover" style="color: orange"></i>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="">Name on the Card</label>
+    <input
+      #cname="ngModel"
+      name="cname"
+      [(ngModel)]="shipping.cardname"
+      type="text"
+      placeholder="John Smith"
+      class="form-control"
+      required
+    />
+    <div class="alert alert-danger" *ngIf="cname.touched && cname.invalid">
+      <div *ngIf="cname.errors.required">Card HolderName is required.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="">Credit card number</label>
+    <input
+      #cardNumber="ngModel"
+      name="cardNumber"
+      [(ngModel)]="shipping.cardNumber"
+      type="text"
+      class="form-control"
+      placeholder="0000 0000 0000 0000"
+      required
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="cardNumber.touched && cardNumber.invalid"
+    >
+      <div *ngIf="cardNumber.errors.required">Card Number is required.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="">Exp Month/ Year </label>
+    <input
+      #monYear="ngModel"
+      name="monYear"
+      [(ngModel)]="shipping.monYear"
+      type="text"
+      class="form-control"
+      placeholder="01/20"
+      required
+    />
+    <div class="alert alert-danger" *ngIf="monYear.touched && monYear.invalid">
+      <div *ngIf="monYear.errors.required">
+        Valid mon/year details are required.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="">CVV</label>
+    <input
+      #cvv="ngModel"
+      name="cvv"
+      [(ngModel)]="shipping.cvv"
+      type="password"
+      class="form-control"
+      required
+      placeholder="***"
+    />
+    <div class="alert alert-danger" *ngIf="cvv.touched && cvv.invalid">
+      <div *ngIf="cvv.errors.required">CVV is required.</div>
+    </div>
+  </div>
+
+  <button [disabled]="!f.valid" (click)="placeOrder()" class="btn btn-primary">
+    Place Order
+  </button>
+</form>
